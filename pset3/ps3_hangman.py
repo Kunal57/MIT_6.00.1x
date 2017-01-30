@@ -79,7 +79,11 @@ def getAvailableLetters(lettersGuessed):
     returns: string, comprised of letters that represents what letters have not
       yet been guessed.
     '''
-    # FILL IN YOUR CODE HERE...
+    alphabet = "abcdefghijklmnopqrstuvwxyz"
+    for letter in lettersGuessed:
+        if letter in alphabet:
+            alphabet = alphabet.replace(letter, "")
+    return alphabet
 
 
 def hangman(secretWord):
