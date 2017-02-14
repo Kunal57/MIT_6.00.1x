@@ -34,7 +34,7 @@ def applyF_filterG(L, f, g):
   """
   l = L[:]
   for i in l:
-    if g(f(i)) is False:
+    if not g(f(i)):
       L.remove(i)
   if len(L) == 0:
     return -1
